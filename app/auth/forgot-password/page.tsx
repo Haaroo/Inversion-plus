@@ -4,11 +4,11 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Auth - Login",
-  description: "Auth - Login",
-};
+    title: "Auth - ForgotPassword",
+    description: "Auth - ForgotPassword",
+  };
 
-export default function Login() {
+export default function ForgotPassword() {
   return (
     <section className='h-full flex flex-col items-center justify-center'>
         <Logo/>

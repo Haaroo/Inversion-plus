@@ -12,22 +12,23 @@ const Form = () =>{
         <>
         <div className='w-full max-w-md'>
             <div className='mb-5'>
-                <h2 className='text-2xl font-semibold mb-2'>Bienvenido!</h2>
+                <h2 className='text-2xl font-semibold mb-2'>¿Olvidaste tu contraseña?</h2>
                 <p className=" text-xl text-gray-600">
-                    Ingresa tu correo y contraseña para iniciar sesion
+                    Recuperala con el siguiente dato: 
                 </p>
             </div>
             <form className="w-full">
                 <Input type='text' placeholder="Correo electronico"/>
-                <Input type='password' placeholder="Contraseña"/>
-                <div className="flex justify-end mb-5">
-                    <button type="button" className="text-gray-600 hover:text-secondary" onClick={()=>router.push('/auth/forgot-password')}>¿Olvidaste tu contraseña?</button>
-                </div>
+                
             </form>
-            <Button type="submit" label="Iniciar sesión"/>
+            <Button type="submit" label="Enviar instrucciones"/>
             <div className="mt-5 flex iteams-center justify-center gap-x-2">
                 <p className="text-gray-500">¿No tienes una cuenta?</p>
                 <button type='button' className="font-semibold hover:text-secondary" onClick={()=>router.push('/auth/register')}>Registrate</button>
+            </div>
+            <div className="mt-3 flex iteams-center justify-center gap-x-2">
+                <p className="text-gray-500">¿Ya tienes una cuenta?</p>
+                <button type='button' className="font-semibold hover:text-secondary" onClick={()=>router.push('/auth/login')}>Inicia sesión</button>
             </div>
         </div>
         </>
