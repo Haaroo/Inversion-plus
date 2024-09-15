@@ -1,7 +1,5 @@
 import {FC,ReactNode} from 'react';
 import Image from 'next/image';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 interface AuthLayoutProps{
     children: ReactNode
@@ -24,8 +22,7 @@ const AuthLayout: FC<AuthLayoutProps> = ({children}) => {
             </section>
             <div>
                 {children}
-            </div>
-            <ToastContainer/>
+            </div>       
         </main>
     );
 };
