@@ -3,10 +3,37 @@
 import Button from "@/components/ui/button";
 import Input from "@/components/ui/input";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+interface FormData {
+    email: string;
+    password: string;
+}
 
 const Form = () =>{
-
     const router = useRouter();
+
+    const [formData, setFormData] = useState<FormData>({ email: '', password: '' });
+    
+    const [error, setError] = useState<string | null>(null);
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setFormData(prevState => ({ ...prevState, [name]: value }));
+    };
+
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (!formData.email || !formData.password) {
+        toast.error('Todos los campos son obligatorios');
+        return;
+        }
+        toast.success('Formulario enviado con éxito!');
+        setFormData({ email: '', password: '' });
+        setError(null);
+    };
 
     return(
         <>
@@ -17,18 +44,25 @@ const Form = () =>{
                     Ingresa tu correo y contraseña para iniciar sesion
                 </p>
             </div>
-            <form className="w-full">
-                <Input type='text' placeholder="Correo electronico"/>
-                <Input type='password' placeholder="Contraseña"/>
+            <form className="w-full" onSubmit={handleSubmit}>
+                <Input type='text' placeholder="Correo electronico" id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}/>
+                <Input type='password' placeholder="Contraseña" id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}/>
                 <div className="flex justify-end mb-5">
                     <button type="button" className="text-gray-600 hover:text-secondary" onClick={()=>router.push('/auth/forgot-password')}>¿Olvidaste tu contraseña?</button>
                 </div>
             </form>
-            <Button type="submit" label="Iniciar sesión"/>
+            <Button type="submit" label="Iniciar sesión" onClick={()=> handleSubmit(new Event('submit') as any)}/>
             <div className="mt-5 flex iteams-center justify-center gap-x-2">
                 <p className="text-gray-500">¿No tienes una cuenta?</p>
                 <button type='button' className="font-semibold hover:text-secondary" onClick={()=>router.push('/auth/register')}>Registrate</button>
             </div>
+            <ToastContainer />
         </div>
         </>
     )

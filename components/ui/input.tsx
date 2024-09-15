@@ -9,9 +9,13 @@ interface InputProps{
     type: 'text' | 'password';
     placeholder: string;
     className?: string;
+    id: string;
+    name: string;
+    value: string;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: FC<InputProps> = ({type,placeholder,className }) => {
+const Input: FC<InputProps> = ({type,placeholder,className,id, name, value, onChange}) => {
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -20,7 +24,12 @@ const Input: FC<InputProps> = ({type,placeholder,className }) => {
             <input 
             type={type === 'text' ? 'text' : showPassword ? 'text' : 'password'} 
             className={cn("bg-gray-100 w-full py-3 pl-4 pr-12 outline-none rounded-xl", className)}  
-            placeholder={placeholder}/>
+            placeholder={placeholder}
+            id={id}
+            name={name}
+            value={value}
+            onChange={onChange}
+            />
             {type === 'password' && (
             <button 
             type='button' 
