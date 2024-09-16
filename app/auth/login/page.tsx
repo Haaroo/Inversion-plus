@@ -1,6 +1,7 @@
 import Logo from "@/components/shared/logo";
 import Form from "./components/form";
 import { Metadata } from "next";
+import Navbar from "@/app/home/navbar";
 
 
 export const metadata: Metadata = {
