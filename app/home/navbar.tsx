@@ -10,7 +10,7 @@ const NavbarHome = () => {
 
     return (
         <div className="w-full h-full relative">
-            <header className="flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md relative">
+            <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md">         
                 <Image 
                     src='/logo.svg' 
                     alt='Logo' 
@@ -33,7 +33,7 @@ const NavbarHome = () => {
                     </svg>
                 </button>
 
-                <div className={`fixed inset-0 z-50 bg-white bg-opacity-10 backdrop-blur-md transform transition-transform duration-300 ease-in-out xl:relative xl:flex xl:items-center xl:gap-12 xl:bg-transparent xl:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+                <div className={`fixed inset-0 z-50 bg-white bg-opacity-10 backdrop-blur transform transition-transform duration-300 ease-in-out xl:relative xl:flex xl:items-center xl:gap-12 xl:bg-transparent xl:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                     <button 
                         className="absolute top-4 right-6 text-gray-800 xl:hidden" 
                         onClick={() => setIsOpen(false)}
@@ -49,17 +49,17 @@ const NavbarHome = () => {
                         </svg>
                     </button>
 
-                    <ul className="flex flex-col xl:flex-row xl:space-x-12 xl:items-center xl:gap-12 p-6 xl:p-0">
-                        <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false)}}>
+                    <ul className="flex flex-col xl:flex-row xl:space-x-12 xl:items-center xl:gap-12 p-6 xl:p-0 text-xl">
+                        <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false); router.push('/');}}>
                             <a>Inicio</a>
                             <span className="absolute left-0 bottom-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
                         </li>
-                        <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false)}}>
+                        <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false); router.push('/home/contact');}}>
                             <a>Contacto</a>
                             <span className="absolute left-0 bottom-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
                         </li>
-                        <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false)}}>
-                            <a>Configuracion</a>
+                        <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false); router.push('/home/about');}}>
+                            <a>Sobre nosotros</a>
                             <span className="absolute left-0 bottom-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
                         </li>
                         <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false); router.push('/auth/login');}}>

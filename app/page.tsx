@@ -1,7 +1,4 @@
 'use client'
-
-import Image from "next/image";
-import router from "next/router";
 import HomePage from "./home/home";
 import NavbarHome from "./home/navbar";
 
