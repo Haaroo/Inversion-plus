@@ -28,6 +28,8 @@ const ContactPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     
+    toast.dismiss();
+    
     if (!formData.name || !formData.email || !formData.message) {
       toast.error('Todos los campos son obligatorios');
       return;

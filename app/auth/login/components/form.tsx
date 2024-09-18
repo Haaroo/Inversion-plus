@@ -26,6 +26,9 @@ const Form = () =>{
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+
+        toast.dismiss();
+        
         if (!formData.email || !formData.password) {
         toast.error('Todos los campos son obligatorios');
         return;
