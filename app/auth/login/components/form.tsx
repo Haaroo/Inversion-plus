@@ -33,7 +33,19 @@ const Form = () =>{
         toast.error('Todos los campos son obligatorios');
         return;
         }
-        toast.success('Formulario enviado con éxito!');
+        
+        if (formData.email === 'admin@cloudbooks.com' && formData.password === '12345') {
+            toast.success('Bienvenido al Dashboard!');
+            setFormData({ email: '', password: '' });
+            setError(null);
+            setTimeout(() => {
+                router.push('/dashboard');
+            }, 2000);
+        } else {
+            toast.error('Credenciales incorrectas');
+            setError('Credenciales incorrectas');
+        }
+
         setFormData({ email: '', password: '' });
         setError(null);
     };

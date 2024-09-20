@@ -6,8 +6,10 @@ import { ButtonDash } from '@/components/ui/buttonDash'
 import { SidebarItem } from '../SidebarItem'
 
 import { dataGeneralSidebar, dataSupportSidebar, dataToolsSidebar } from './SidebarRoutes.data'
+import { useRouter } from 'next/navigation'
 
 export function SidebarRoutes() {
+    const router = useRouter();
     return (
         <div className='flex flex-col justify-between h-full'>
             <div>
@@ -39,8 +41,8 @@ export function SidebarRoutes() {
 
             <div>
                 <div className='text-center p-6'>
-                    <ButtonDash variant="outline" className='w-full'>
-                        Upgrade Plan
+                    <ButtonDash variant="outline" className='w-full' onClick={() => { router.push('/'); }}>
+                        Regresar al inicio
                     </ButtonDash>
                 </div>
 

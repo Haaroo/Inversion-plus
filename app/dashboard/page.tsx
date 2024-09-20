@@ -48,7 +48,7 @@ export default function Home() {
           />
         ))}
         </div>
-        <div className="grid grid-cols-1 mt-12 xl:grid-cols-2 md:gap-x-10">
+        <div className="grid grid-cols-1 mt-12 xl:grid-cols-2 md:gap-x-10 gap-y-4">
           <LastCustomers/>
           <Salesdistributor/>
         </div>
