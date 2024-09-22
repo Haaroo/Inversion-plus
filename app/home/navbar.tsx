@@ -10,7 +10,7 @@ const NavbarHome = () => {
 
     return (
         <div className="w-full h-full relative">
-            <header className="fixed top-0 left-0 w-full z-50 flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md">         
+            <header className="top-0 left-0 w-full z-50 flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md">         
                 <Image 
                     src='/logo.svg' 
                     alt='Logo' 

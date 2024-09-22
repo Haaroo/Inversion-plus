@@ -40,7 +40,7 @@ const Form = () =>{
             setError(null);
             setTimeout(() => {
                 router.push('/dashboard');
-            }, 2000);
+            }, 1500);
         } else {
             toast.error('Credenciales incorrectas');
             setError('Credenciales incorrectas');

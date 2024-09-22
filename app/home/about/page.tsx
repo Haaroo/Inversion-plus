@@ -10,11 +10,11 @@ const AboutUs: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false); 
     
     return (
-        <div className="pt-20" >
+        <div>
             <NavbarHome />
-            <main className='min-h-screen grid grid-cols-1 lg:grid-cols-1 p-10 lg:p-8'>
+            <main className='min-h-max grid grid-cols-1 lg:grid-cols-1 p-10 lg:p-8'>
             <section className='lg:flex h-full flex-col items-center justify-center gap-y-5 bg-primary rounded-2xl'>
-                <div className="pt-24 px-4 sm:px-6 lg:px-8">
+                <div className="pt-5 px-4 sm:px-6 lg:px-8">
                     <div className="max-w-5xl mx-auto">
                         <section className="text-center">
                             <h1 className="text-4xl font-extrabold text-white sm:text-5xl">
@@ -24,7 +24,7 @@ const AboutUs: React.FC = () => {
                                 Conoce al equipo detrás de nuestra librería digital y nuestra misión para ofrecerte la mejor experiencia de lectura.
                             </p>
                         </section> 
-                        <section className="mt-12">
+                        <section className="mt-5">
                             <h2 className="text-3xl font-semibold text-white text-center">
                                 Nuestro Equipo
                             </h2>
