@@ -12,6 +12,12 @@ interface FormData {
     password: string;
 }
 
+interface Credentials {
+    password: string;
+    redirect: string;
+    message: string;
+}
+
 const Form = () =>{
     const router = useRouter();
 
@@ -23,7 +29,10 @@ const Form = () =>{
         const { name, value } = event.target;
         setFormData(prevState => ({ ...prevState, [name]: value }));
     };
-
+    const credentials: Record<string, Credentials> = {
+        'admin@cloudbooks.com': { password: '12345', redirect: '/dashboard', message: 'Bienvenido al Dashboard!' },
+        'emmanuel@cloudbooks.com': { password: '12345', redirect: '/page', message: 'Bienvenido al Inicio!' }
+    };
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
 
@@ -34,18 +43,19 @@ const Form = () =>{
         return;
         }
         
-        if (formData.email === 'admin@cloudbooks.com' && formData.password === '12345') {
-            toast.success('Bienvenido al Dashboard!');
-            setFormData({ email: '', password: '' });
-            setError(null);
+        const user = credentials[formData.email];
+
+        if (user && user.password === formData.password) {
+            toast.success(user.message);
             setTimeout(() => {
-                router.push('/dashboard');
+                router.push(user.redirect);
             }, 1500);
+            setFormData({ email: '', password: '' }); 
+            setError(null);
         } else {
             toast.error('Credenciales incorrectas');
             setError('Credenciales incorrectas');
         }
-
         setFormData({ email: '', password: '' });
         setError(null);
     };
