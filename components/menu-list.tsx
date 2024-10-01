@@ -31,28 +31,28 @@ const MenuList = () => {
                                     >
 
                                         <div className="mb-2 mt-4 text-lg font-medium">
-                                            TarreDev
+                                            CloudBooks
                                         </div>
                                         <p className="text-sm leading-tight text-muted-foreground">
-                                            Sumérgete en el apasionante mundo del café con nuestra web especializada en la venta de granos de café de alta calidad, molidos y en cápsulas.
+                                        CloudBooks es una librería en línea que ofrece una amplia selección de libros digitales, permitiendo a los lectores explorar, comprar y disfrutar de su pasión por la lectura de manera cómoda y accesible.
                                         </p>
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/shop" title="Tienda">
-                                Accede a toda tu información, tus pedidos y mucho más.
+                            <ListItem href="/shop" title="Nuestra Historia">
+                            Conoce los orígenes de CloudBooks, cómo comenzamos y nuestra misión de hacer que la lectura digital sea accesible para todos.
                             </ListItem>
-                            <ListItem href="/offers" title="Ofertas">
-                                Sección dedicada a promociones y descuentos especiales
+                            <ListItem href="/offers" title="Nuestro Equipo">
+                            Descubre al apasionado equipo detrás de CloudBooks. Conoce a nuestros expertos en literatura, tecnología y atención al cliente que hacen posible esta experiencia.
                             </ListItem>
-                            <ListItem href="/" title="Accesorios">
-                                Productos complementarios como tazas, molinillos, prensas, etc.
+                            <ListItem href="/" title="Valores y Compromiso">
+                            Aprende sobre nuestros valores fundamentales, como la sostenibilidad, la diversidad y el apoyo a los autores, y cómo nos comprometemos a fomentar una comunidad lectora responsable.
                             </ListItem>
                         </ul>
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Cafés</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>Libros</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                             {components.map((component) => (
@@ -70,7 +70,7 @@ const MenuList = () => {
                 <NavigationMenuItem>
                     <Link href="/accesorios" legacyBehavior passHref>
                         <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                            Accesorios
+                            Contactanos
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
@@ -83,22 +83,22 @@ export default MenuList
 
 const components: { title: string; href: string; description: string }[] = [
     {
-        title: "Café grano",
+        title: "Libros",
         href: "/category/grano",
         description:
-            "Granos de café enteros que requieren ser molidos antes de su preparación. Ideal para los amantes del café que aprecian la frescura y la calidad",
+            " Explora una amplia variedad de títulos en diferentes géneros. Desde clásicos hasta novedades, encuentra tu próxima gran lectura y disfruta de la magia de los libros digitales.",
     },
     {
-        title: "Café molido",
+        title: "Audiolibros",
         href: "/category/molido",
         description:
-            "Café en forma de polvo listo para ser utilizado en diferentes métodos de preparación, como la cafetera de filtro o la prensa francesa",
+            "Sumérgete en historias cautivadoras mientras te mueves. Nuestros audiolibros te ofrecen una experiencia de escucha envolvente, perfecta para cualquier momento del día.",
     },
     {
-        title: "Café de cápsula",
+        title: "Revistas",
         href: "/category/capsula",
         description:
-            "Café envasado en cápsulas individuales, ofreciendo conveniencia y consistencia en la preparación",
+            "Mantente informado y entretenido con nuestra colección de revistas digitales. Disfruta de artículos interesantes y de actualidad sobre temas que te apasionan, todo al alcance de un clic.",
     },
 ]
 

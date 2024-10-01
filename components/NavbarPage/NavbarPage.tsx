@@ -5,6 +5,7 @@ import MenuList from "@/components/menu-list";
 import ItemsMenuMobile from "@/components/items-menu-movile";
 import { useCart } from "@/components/hooks/use-cart";
 import { useLovedProducts } from "@/components/hooks/use-love-products";
+import Image from 'next/image';
 
 const NavbarPage = () => {
     const router = useRouter()
@@ -13,9 +14,13 @@ const NavbarPage = () => {
 
     return (
         <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
-            <h1 className="text-3xl" onClick={() => router.push("/")}>Cloud
-                <span className="font-bold">Books</span>
-            </h1>
+            <Image 
+                            src='/logo.svg' 
+                            alt='Logo' 
+                            width={250} 
+                            height={150} 
+                            className="transition-all"
+                        />
             <div className="items-center justify-between hidden sm:flex">
                 <MenuList />
             </div>

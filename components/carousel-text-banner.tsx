@@ -7,26 +7,26 @@ import Autoplay from 'embla-carousel-autoplay'
 export const dataCarouselTop = [
     {
         id: 1,
-        title: "Envío en 24/48 h",
-        description: "Como cliente VIP, tus envios en 24/48 horas. Obtén más información y únete",
+        title: "Descubre tu próxima lectura",
+        description: "Sumérgete en una vasta colección de libros digitales. Desde novelas clásicas hasta bestsellers contemporáneos, ¡hay algo para todos!",
         link: "#!"
     },
     {
         id: 2,
-        title: "Consigue hasta un -25% en compras superiores a 40€",
-        description: "−20 % al gastar 100 € o −25 % al gastar 150 €. Usa el código TARREDEV.",
+        title: "Ofertas exclusivas solo para ti",
+        description: "Aprovecha descuentos y promociones especiales en una selección de títulos. ¡Haz que tu biblioteca digital crezca sin gastar de más!",
         link: "#",
     },
     {
         id: 3,
-        title: "Devoluciones y entregas gratuitas",
-        description: "Como cliente, tienes envíos y devoluciones gratis en un plazo de 30 días en todos los pedidos. Obtén más información y únete",
+        title: "Nuevas publicaciones cada semana",
+        description: "Mantente al día con las últimas novedades literarias. Explora nuestras selecciones semanales y encuentra tu próximo libro favorito.",
         link: "#",
     },
     {
         id: 4,
-        title: "Comprar novedades",
-        description: "Todas las novedades al 50% de descuento",
+        title: "Comparte tu pasión por los libros",
+        description: "Únete a nuestra comunidad de lectores. Comparte reseñas, recomendaciones y conecta con otros amantes de la literatura.",
         link: "#",
     },
 ]
