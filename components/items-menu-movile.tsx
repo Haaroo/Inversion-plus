@@ -12,6 +12,7 @@ const ItemsMenuMobile = () => {
                 <Link href="/categories/cafe-molido" className="block">Libro</Link>
                 <Link href="/categories/cafe-grano" className="block">Audio Libro</Link>
                 <Link href="/categories/cafe-capsula" className="block">Revistas</Link>
+                <Link href="/categories/cafe-capsula" className="block">Articulos</Link>
             </PopoverContent>
         </Popover>
     );

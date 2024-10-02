@@ -100,6 +100,12 @@ const components: { title: string; href: string; description: string }[] = [
         description:
             "Mantente informado y entretenido con nuestra colección de revistas digitales. Disfruta de artículos interesantes y de actualidad sobre temas que te apasionan, todo al alcance de un clic.",
     },
+    {
+        title: "Articulos",
+        href: "/category/capsula",
+        description:
+            "Los artículos son escritos que analizan, informan o opinan sobre un tema específico. Pueden ser de diferentes tipos, como artículos de noticias, de opinión, científicos, académicos o de divulgación.",
+    },
 ]
 
 const ListItem = React.forwardRef<

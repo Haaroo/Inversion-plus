@@ -2,6 +2,7 @@ import BannerDiscount from "@/components/banner-discount"
 import CarouselTextBanner from "@/components/carousel-text-banner"
 import ChooseCategory from "@/components/choose-category"
 import FeaturedProducts from "@/components/featured-products"
+import Footer from "@/components/footer"
 import NavbarPage from "@/components/NavbarPage/NavbarPage"
 
 export default function page() {
@@ -12,9 +13,7 @@ export default function page() {
         <FeaturedProducts/>
         <BannerDiscount />
         <ChooseCategory />
-        <main>
-          Hello from page
-        </main>
+        <Footer />
     </>
   )
 }

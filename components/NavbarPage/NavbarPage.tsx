@@ -1,5 +1,5 @@
 "use client"
-import { BaggageClaim, Heart, ShoppingCart, User } from "lucide-react";
+import { BaggageClaim, Heart, ShoppingCart, User,LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import MenuList from "@/components/menu-list";
 import ItemsMenuMobile from "@/components/items-menu-movile";
@@ -46,8 +46,7 @@ const NavbarPage = () => {
                     className={`cursor-pointer 
                     ${lovedItems.length > 0 && 'fill-black dark:fill-white'}`}
                     onClick={() => router.push("/loved-products")} />
-
-                <User strokeWidth={1} className="cursor-pointer" />
+                <LogOut strokeWidth={1} className="cursor-pointer" onClick={() => router.push("/")}/>
             </div>
         </div>
     );
