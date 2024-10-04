@@ -1,0 +1,5 @@
+
+
+GET http://localhost:1337/api/products?populate=*&filters[category][slug][$eq]=${slug}
+Authorization: Bearer
+ae9557f9e5eba4d59c98fa947550ce35d691a6040b7f1b2faa86dba049095b2fb04a30d96cbbfb7ae1059c28cc0952ca7c7a059f0a17c51147733965530a97ee356f1d92c52d1010efed545ce6b2c396417539aba1cdfd61505ec1f47cc5f49dbb79bda88dfe04e121eb80f680976c41202aba13b8c43ee832b46ff85a7e895a
