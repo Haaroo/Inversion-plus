@@ -5,7 +5,10 @@ export type ProductType = {
   genero: string;
   category: string;
   description: string;
+  origin: string;
+  taste: string;
   images: {
+      data: any;
       id: number;
       url: string;
   }

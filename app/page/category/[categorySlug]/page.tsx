@@ -17,22 +17,23 @@ export default function Page() {
     const { result, loading }: ResponseType = useGetCategoryProduct(categorySlug);
     const [filterOrigin, setFilterOrigin] = useState("");
     const router = useRouter();
+    console.log(result) 
     const filteredProducts =
         result !== null &&
         !loading &&
         (filterOrigin === ""
         ? result
         : result.filter(
-            (product: ProductType) => product.category === filterOrigin
+            (product: ProductType) => product.origin === filterOrigin
             ));
-            console.log(result)
+
     return (
         <div>
-            <NavbarPage />
+            <NavbarPage/>
         <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24">
         {result !== null && !loading && result.length !== 0 && (
             <h1 className="text-3xl font-medium">
-            Café 
+            Tipó: {result[0].category.categoryName}
             </h1>
         )}
         <Separator />
@@ -41,17 +42,21 @@ export default function Page() {
             <FiltersControlsCategory setFilterOrigin={setFilterOrigin} />
 
             <div className="grid gap-5 mt-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">
-            {loading && (<SkeletonSchema grid={3} />)}
-            {result !== null && !loading && (
-                result.map((product: ProductType) =>(
-                    <ProductCard key={product.slug} product={product}/>
-                ))
-            )}
+            {loading && <SkeletonSchema grid={3} />}
+            {filteredProducts !== null &&
+                !loading &&
+                filteredProducts.map((product: ProductType) => (
+                <ProductCard key={product.id} product={product} />
+                ))}
+            {filteredProducts !== null &&
+                !loading &&
+                filteredProducts.length === 0 && (
+                <p>No hay productos con este filtro.</p>
+                )}
             </div>
         </div>
         </div>
-        <Footer />
+        <Footer/>
         </div>
-    
-    );
+  );
 }

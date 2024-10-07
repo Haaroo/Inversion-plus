@@ -21,14 +21,14 @@ const ChooseCategory = () => {
         </h3>
         <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-4">
         {loading ? (
-                    <SkeletonSchema grid={3} />  // Asegúrate de tener este componente
+                    <SkeletonSchema grid={3} />
                 ) : (
             result && result.map((category2 : CategoryType) => {
                 const { id, categoryName,slug, images } = category2;
                 return (
                     <Link
                     key={id}
-                    href={`/category/${slug}`}
+                    href={`page/category/${slug}`}
                     className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-lg"
                     >
                         <div className="p-1 h-full">

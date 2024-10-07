@@ -7,7 +7,7 @@ export type FilterTypes = {
   export type ResultFilterTypes = {
     schema: {
       attributes: {
-        genero: {
+        origin: {
           enum: any;
         };
       };
