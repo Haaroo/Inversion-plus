@@ -8,16 +8,16 @@ const  HomePage = () => {
         <main className='min-h-max grid grid-cols-1 lg:grid-cols-1 p-10 lg:p-8'>
             <section className='lg:flex h-full flex-col items-center justify-center gap-y-5 bg-primary rounded-2xl'>
                         <h1 className="text-4xl font-extrabold text-white mb-4 text-center mt-5">
-                            Bienvenido a nuestra Biblioteca Digital
+                            Bienvenido a Inversión+: Tu camino hacia una inversión segura comienza aquí.
                         </h1>
                         <p className="text-lg text-white/85 mb-6 text-center">
-                            Explora una vasta colección de libros y recursos desde la comodidad de tu hogar.
+                            Explora una vasta colección de recursos de inversión desde la comodidad de tu hogar.
                         </p>
                         <Image 
                         src='/books.svg' 
                         alt='book' 
-                        width={800}
-                        height={800}
+                        width={450}
+                        height={450}
                         className="object-cover rounded-lg mb-6 flex items-center relative"
                         />
                         <div className="flex flex-col sm:flex-row justify-center gap-4 mb-5">

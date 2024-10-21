@@ -37,7 +37,7 @@ const AboutUs: React.FC = () => {
                                         height={800}
                                         className="object-cover rounded-lg mb-6 flex items-center relative"
                                     />
-                                    <h3 className="mt-4 text-xl font-bold text-gray-800">Michel Emanuel Lopez Franco</h3>
+                                    <h3 className="mt-4 text-xl font-bold text-gray-800">Erasmo Gabriel Martinez Soltero</h3>
                                     <p className="text-gray-600">Asesor</p>
                                 </div>
                                 <div className="bg-white p-6 rounded-lg shadow-lg text-center">

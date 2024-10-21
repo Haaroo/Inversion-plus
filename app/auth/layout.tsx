@@ -24,11 +24,11 @@ const AuthLayout: FC<AuthLayoutProps> = ({children}) => {
                     <Image src='/wallpaper.svg' alt='Wallpaper' fill/>
                 </div>
                 <div>
-                    <h3 className='text-white text-2xl font-semibold text-center mb-5'>¡Bienvenido a CloudBooks!
-                        <br/> Tu aliado inteligente para una gestión eficiente y organizada.
+                    <h3 className='text-white text-2xl font-semibold text-center mb-5'>¡Bienvenido a Inversion+!
+                        <br/> Inversión+: Aprende hoy, invierte mañana.
                     </h3>
-                        <p className='text-white/70 text-xl font-semibold text-center'>Inicia sesión para optimizar tus operaciones y llevar tu librería al siguiente nivel.</p>
-                        <p className='text-white/70 text-xl font-semibold text-center'>Estamos aquí para ayudarte a transformar cada desafío en una oportunidad.</p>
+                        <p className='text-white/70 text-xl font-semibold text-center'>Inicia sesión y empodera tu futuro con Inversión+.</p>
+                        <p className='text-white/70 text-xl font-semibold text-center'>Ingresa y da el primer paso hacia tu futuro financiero.</p>
                 </div>
             </section>
             <div>

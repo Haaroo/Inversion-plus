@@ -53,11 +53,11 @@ const ContactPage: React.FC = () => {
                 ¡Estamos aquí para ayudarte!
               </h2>
               <h3 className="mt-4 text-xl text-white/70 text-center px-6">
-                Si tienes alguna pregunta, comentario o necesitas asistencia con nuestro sistema de libreria digital, <br />
+                Si tienes alguna pregunta, comentario o necesitas asistencia con nuestro sistema de asesoramiento de inversión, <br />
                 no dudes en ponerte en contacto con nosotros. Nuestro equipo está disponible para brindarte el soporte <br />
                 que necesites y asegurarse de que tengas la mejor experiencia posible con nuestra solución.
               </h3 >
-            </section>
+            </section>  
             <section className='grid-cols-3 lg:grid-cols-3'>
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">
@@ -89,13 +89,6 @@ const ContactPage: React.FC = () => {
               </div>
               <div className='mt-16'/>
             </section>
-            <Image 
-                        src='/message2.svg' 
-                        alt='book' 
-                        width={200}
-                        height={200}
-                        className="absolute top-36 right-20 hidden lg:flex"
-                        />
             <div className='mb-28'></div>
         </section>
       </main>
