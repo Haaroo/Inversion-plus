@@ -19,7 +19,7 @@ const ChooseCategory = () => {
         <h3 className="px-6 pb-4 text-3xl sm:pb-8">
             Elige tu categoría favorita
         </h3>
-        <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-3">
         {loading ? (
                     <SkeletonSchema grid={3} />
                 ) : (
@@ -32,13 +32,13 @@ const ChooseCategory = () => {
                     className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-lg"
                     >
                         <div className="p-1 h-full">
-                            <div className="w-full items-center overflow-hidden">
+                            <div className="shadow-none w-full items-center overflow-hidden">
                                 <img
                                     src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
                                     alt={categoryName}
-                                    className="max-w-[270px] transition duration-300 ease-in-out rounded-lg hover:scale-110"
+                                    className="max-w-full transition duration-300 ease-in-out rounded-lg hover:scale-110"
                                 />
-                                <p className="pt-12 absolute w-full text-lg font-bold text-center text-black bottom-1">
+                                <p className="absolute w-full py-2 text-lg font-bold text-center text-black bottom-5 backdrop-blur-lg">
                                     {categoryName}
                                 </p>
                             </div>

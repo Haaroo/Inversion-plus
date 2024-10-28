@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
-import { useGetFeaturedProducts } from "@/api/useGetFeaturedProducts";
+import { useGetFeaturedNotices } from "@/api/getFeturedNotices";
 import { Carousel, CarouselContent, CarouselItem } from "./ui/carousel";
 import SkeletonSchema from "./skeletonSchema";
 import { Card, CardContent } from "./ui/card";
-import { ProductType } from "@/types/product";
+import { NoticeType } from "@/types/notices";
 import { ResponseType } from "@/types/response";
 
-const FeaturedProducts = () => {
-    const { result, loading,error }: ResponseType = useGetFeaturedProducts();
+const FeaturedNotice = () => {
+    const { result, loading,error }: ResponseType = useGetFeaturedNotices();
     console.log(result,loading,error)
     if (error) {
         return <p>Error al cargar las categorías: {error}</p>;
@@ -22,22 +22,25 @@ const FeaturedProducts = () => {
                 {loading ? (
                     <SkeletonSchema grid={3} />  // Asegúrate de tener este componente
                 ) : (
-            result && result.map((category:ProductType) => {
-                const { id, productName,images,genero } = category;
+            result && result.map((category:NoticeType) => {
+                const { id, Title,Description,images } = category;
                             return (
-                                <CarouselItem key={id} className="md:basis-1/4 lb:basis-1/4 group relative">
+                                <CarouselItem key={id} className="md:basis-1/2 lb:basis-1/2 group relative">
                                     <div className="p-1 h-full">
-                                        <Card className="py-4 border border-gray-300 shadow-none max-w-90 min-h-full">
+                                        <Card className="py-2 border border-gray-300 shadow-none max-w-90 min-h-full">
                                                 <CardContent className="relative w-full items-center justify-center px-6 py-2 h-full">
+                                                    <p className="mt-2 px-4 py-1 text-2xl text-black font-bold">
+                                                        {Title}
+                                                    </p> 
+                                                    <p className="mt-2 px-4 py-1 text-black">
+                                                        {Description}
+                                                    </p> 
                                                     <div className="w-full items-center overflow-hidden">
                                                         <img
                                                         src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
                                                         alt="Image featured"
                                                         className="w-full h-full object-cover text-center items-center"
-                                                        />
-                                                        <p className="mt-2 px-4 py-1 text-white bg-black rounded-full text-center">
-                                                                {genero}
-                                                        </p>         
+                                                        />        
                                                     </div>                                       
                                                 </CardContent>
                                         </Card>
@@ -53,4 +56,4 @@ const FeaturedProducts = () => {
 };
 
 
-export default FeaturedProducts;
+export default FeaturedNotice;
