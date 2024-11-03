@@ -41,9 +41,9 @@ const ContactForm = () => {
     return (
         <Form {...form}>
             {sucessForm ? (
-                <h1>brFormulario se ha enviado con éxito 👽, me contactare contigo lo mas pronto posible 🐘</h1>
+                <h1>¡Formulario se ha enviado con éxito 👽, nos contactare contigo lo mas pronto posible 🐘!</h1>
             ) : (
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 space-x-60">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                     <FormField
                         control={form.control}
                         name="username"
