@@ -1,44 +1,11 @@
 'use client'
 
-import React, { useState } from 'react';
+import React from 'react';
 import NavbarHome from "../navbar"; 
-import Input from '@/components/ui/input';
-import { toast, ToastContainer } from 'react-toastify';
-import Button from '@/components/ui/button';
-import 'react-toastify/dist/ReactToastify.css';
-import Image from 'next/image';
+import ContactForm from '@/components/contact-form';
 
-interface FormData {
-  name: string;
-  email: string;
-  message: string;
-}
 
-const ContactPage: React.FC = () => {
-
-  const [formData, setFormData] = useState<FormData>({ name: '', email: '', message: '' });
-    
-  const [error, setError] = useState<string | null>(null);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = event.target;
-      setFormData(prevState => ({ ...prevState, [name]: value }));
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    
-    toast.dismiss();
-    
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error('Todos los campos son obligatorios');
-      return;
-    }
-    toast.success('Formulario enviado con éxito!');
-    setFormData({ name: '', email: '', message: '' });
-    setError(null);
-  };
-  
+const Contact = () => {
 
   return (
     <div>
@@ -61,40 +28,18 @@ const ContactPage: React.FC = () => {
             <section className='grid-cols-3 lg:grid-cols-3'>
               <div className="bg-white p-8 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-                  Enviar un Mensaje
+                  Enviar un Mensaje <br />
+                  <br />
+                  <ContactForm/>
                 </h2>
-                <form className="w-full" onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                    <div>
-                      <Input type='text' placeholder="Nombre completo" id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}/>
-                    </div>
-                    <div>
-                      <Input type='text' placeholder="Correo electronico" id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleChange}/>
-                    </div>
-                  </div>
-                  <div>
-                      <Input type='text' placeholder="Mensaje" id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}/>
-                  </div>
-                </form>
-                <Button type="submit" label="Enviar mensaje" onClick={()=> handleSubmit(new Event('submit') as any)}/>
               </div>
               <div className='mt-16'/>
             </section>
             <div className='mb-28'></div>
         </section>
       </main>
-      <ToastContainer />
     </div>
   );
 }
 
-export default ContactPage;
+export default Contact;

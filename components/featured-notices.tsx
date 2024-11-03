@@ -39,7 +39,9 @@ const FeaturedNotice = () => {
                                                         <img
                                                         src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
                                                         alt="Image featured"
-                                                        className="w-full h-full object-cover text-center items-center"
+                                                        className="justify-center object-cover text-center items-center"
+                                                        width={400}
+                                                        height={400}
                                                         />        
                                                     </div>                                       
                                                 </CardContent>

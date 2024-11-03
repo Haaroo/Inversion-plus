@@ -28,19 +28,6 @@ const NavbarPage = () => {
                 <ItemsMenuMobile />
             </div>
             <div className="flex items-center justify-between gap-2 sm:gap-7">
-                {cart.items.length === 0 ?
-                    <ShoppingCart strokeWidth="1"
-                        className="cursor-pointer"
-                        onClick={() => router.push("/cart")}
-                    />
-                    : (
-                        <div className="flex gap-1 cursor-pointer" onClick={() => router.push("/cart")}>
-                            <BaggageClaim strokeWidth={1} className="cursor-pointer" />
-                            <span>{cart.items.length}</span>
-                        </div>
-                    )}
-
-
                 <Heart
                     strokeWidth="1"
                     className={`cursor-pointer 
