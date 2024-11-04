@@ -14,13 +14,13 @@ const NavbarPage = () => {
 
     return (
         <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
-            <Image 
-                            src='/logo.png' 
-                            alt='Logo' 
-                            width={250} 
-                            height={150} 
-                            className="transition-all"
-                        />
+                <Image 
+                                src='/logo.png' 
+                                alt='Logo' 
+                                width={250} 
+                                height={150} 
+                                className="transition-all"
+                            />
             <div className="items-center justify-between hidden sm:flex">
                 <MenuList />
             </div>
