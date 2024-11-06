@@ -31,10 +31,10 @@ const MenuList = () => {
                                     >
 
                                         <div className="mb-2 mt-4 text-lg font-medium">
-                                            CloudBooks
+                                            Inversion+
                                         </div>
                                         <p className="text-sm leading-tight text-muted-foreground">
-                                        CloudBooks es una librería en línea que ofrece una amplia selección de libros digitales, permitiendo a los lectores explorar, comprar y disfrutar de su pasión por la lectura de manera cómoda y accesible.
+                                        Inversión+ es tu aliado en el camino hacia la libertad financiera, ofreciéndote los recursos clave para que los jóvenes universitarios aprendan a invertir con confianza.
                                         </p>
                                     </a>
                                 </NavigationMenuLink>
@@ -52,7 +52,7 @@ const MenuList = () => {
                     </NavigationMenuContent>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                    <NavigationMenuTrigger>Libros</NavigationMenuTrigger>
+                    <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
                     <NavigationMenuContent>
                         <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                             {components.map((component) => (
@@ -83,16 +83,16 @@ export default MenuList
 
 const components: { title: string; href: string; description: string }[] = [
     {
-        title: "Libros",
-        href: "/category/grano",
+        title: "Primero pasos",
+        href: "/page/info",
         description:
-            " Explora una amplia variedad de títulos en diferentes géneros. Desde clásicos hasta novedades, encuentra tu próxima gran lectura y disfruta de la magia de los libros digitales.",
+            " Aprende los primeros pasos para invertir: define tus objetivos, evalúa tu riesgo y empieza con opciones sencillas.",
     },
     {
-        title: "Audiolibros",
-        href: "/category/molido",
+        title: "Calculadora",
+        href: "page/calculadora",
         description:
-            "Sumérgete en historias cautivadoras mientras te mueves. Nuestros audiolibros te ofrecen una experiencia de escucha envolvente, perfecta para cualquier momento del día.",
+            "Calcula el rendimiento de tu inversión: ingresa tu monto y descubre cómo crece tu dinero con el tiempo.",
     },
     {
         title: "Revistas",
