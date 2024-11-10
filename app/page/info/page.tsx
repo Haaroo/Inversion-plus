@@ -17,7 +17,7 @@ export default function page() {
     <>
         <NavbarPage />
         <div className="max-w-4xl mx-auto p-6">
-          <h1 className="text-3xl font-bold mb-4">Primeros pasos...</h1>
+          <h1 className="text-3xl font-bold mb-4 text-gray-500">Primeros pasos...</h1>
             <section className="mb-12">
             <h2 className="text-2xl font-semibold text-center text-gray-800 mb-8"><br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r to-cyan-400 from-indigo-600">La importancia de invertir durante la universidad</span>
@@ -42,11 +42,11 @@ export default function page() {
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger className='text-2xl'>¿Qué es una inversión?</AccordionTrigger>
-                <AccordionContent>
-                    Una inversión es la acción de destinar recursos, generalmente dinero, a un
-                  activo con la expectativa de obtener un retorno o beneficio en el futuro.
-                  Esto puede incluir la compra de acciones, bonos, bienes raíces, o incluso
-                  iniciar un negocio.
+                <AccordionContent className='text-lg'>
+                La inversión es el acto de destinar recursos, generalmente dinero, con el objetivo de generar ganancias o beneficios en el futuro. 
+                En lugar de gastar esos recursos de manera inmediata, una inversión los coloca en activos, como acciones, bonos, bienes raíces o negocios, 
+                esperando que con el tiempo estos aumenten su valor o generen ingresos. Es una forma de hacer crecer el capital a través de rendimientos, 
+                que pueden ser pagos de intereses, dividendos, o una apreciación en el valor del activo.
                   <Image 
                                         src='/pageInversion/inv1.png' 
                                         alt='par1' 
@@ -63,16 +63,24 @@ export default function page() {
             <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger className='text-2xl'>¿Por qué debemos invertir?</AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent className='text-lg'>
                       Una inversión es la acción de destinar recursos, generalmente dinero, a un
                     activo con la expectativa de obtener un retorno o beneficio en el futuro.
                     Esto puede incluir la compra de acciones, bonos, bienes raíces, o incluso
                     iniciar un negocio.
-                    <ul className="list-disc list-inside">
-                      <li>Generar riqueza: Las inversiones pueden ayudar a aumentar tu capital con el tiempo.</li>
-                      <li>Proteger el dinero contra la inflación: Invertir puede ayudarte a que tu dinero crezca más rápido que la inflación.</li>
-                      <li>Crear ingresos pasivos: Algunas inversiones pueden proporcionar un flujo constante de ingresos.</li>
-                      <li>Lograr objetivos financieros: Invertir te puede ayudar a alcanzar metas a largo plazo, como comprar una casa o planificar tu jubilación.</li>
+                    <ul className="list-disc list-inside mt-5">
+                      <li>Creación de riqueza: La inversión permite que el dinero trabaje para ti, incrementando tu patrimonio con el tiempo. Con el interés compuesto, 
+                        las inversiones pueden crecer de manera exponencial si se reinvierten las ganancias.</li><br />
+                      <li>Protección contra la inflación: La inflación reduce el valor del dinero con el tiempo. Si el dinero simplemente se guarda sin invertir, 
+                        pierde poder adquisitivo. Las inversiones, al generar rendimientos, pueden ayudar a superar la inflación y preservar el valor del capital.</li><br />
+                      <li>Logro de objetivos financieros: Ya sea para la compra de una casa, la educación de los hijos o la jubilación, invertir permite alcanzar metas financieras importantes. 
+                        Una estrategia de inversión adecuada puede ayudar a acumular el capital necesario para estos fines.</li><br />
+                      <li>Ingresos pasivos: Algunas inversiones, como los bienes raíces o los dividendos de acciones, pueden generar ingresos regulares sin requerir una gran cantidad de trabajo 
+                        o supervisión constante. Esto es útil para diversificar las fuentes de ingresos.</li><br />
+                      <li>Preparación para la jubilación: Invertir a lo largo de la vida laboral permite acumular fondos para la jubilación. Las cuentas de jubilación, por ejemplo, 
+                        están diseñadas para facilitar la inversión a largo plazo y permitir que los ahorros crezcan hasta el retiro.</li><br />
+                      <li>Diversificación de fuentes de ingreso: Tener dinero invertido en diferentes activos ayuda a reducir la dependencia de un solo tipo de ingreso. 
+                        En caso de perder un empleo o enfrentar dificultades, una cartera diversificada de inversiones puede ofrecer un respaldo financiero.</li>
                     </ul>
                     <Image 
                                         src='/pageInversion/inv2.png' 
@@ -89,7 +97,7 @@ export default function page() {
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
                   <AccordionTrigger className='text-2xl'>Tipos de inversiones</AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent className='text-lg'>
                       Una inversión es la acción de destinar recursos, generalmente dinero, a un
                     activo con la expectativa de obtener un retorno o beneficio en el futuro.
                     Esto puede incluir la compra de acciones, bonos, bienes raíces, o incluso

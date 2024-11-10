@@ -39,13 +39,13 @@ const MenuList = () => {
                                     </a>
                                 </NavigationMenuLink>
                             </li>
-                            <ListItem href="/shop" title="Nuestra Historia">
+                            <ListItem href="/page/about_us" title="Nuestra Historia">
                             Conoce los orígenes de CloudBooks, cómo comenzamos y nuestra misión de hacer que la lectura digital sea accesible para todos.
                             </ListItem>
-                            <ListItem href="/offers" title="Nuestro Equipo">
+                            <ListItem href="/page/team" title="Nuestro Equipo">
                             Descubre al apasionado equipo detrás de CloudBooks. Conoce a nuestros expertos en literatura, tecnología y atención al cliente que hacen posible esta experiencia.
                             </ListItem>
-                            <ListItem href="/" title="Valores y Compromiso">
+                            <ListItem href="/page/valores" title="Valores y Compromiso">
                             Aprende sobre nuestros valores fundamentales, como la sostenibilidad, la diversidad y el apoyo a los autores, y cómo nos comprometemos a fomentar una comunidad lectora responsable.
                             </ListItem>
                         </ul>
