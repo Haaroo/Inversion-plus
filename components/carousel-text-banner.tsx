@@ -7,26 +7,26 @@ import Autoplay from 'embla-carousel-autoplay'
 export const dataCarouselTop = [
     {
         id: 1,
-        title: "Descubre tu próxima lectura",
-        description: "Sumérgete en una vasta colección de libros digitales. Desde novelas clásicas hasta bestsellers contemporáneos, ¡hay algo para todos!",
+        title: "El Poder del Interés Compuesto",
+        description: "Invertir desde joven te permite aprovechar el poder del interés compuesto, una herramienta clave para hacer crecer tu dinero a lo largo del tiempo.",
         link: "#!"
     },
     {
         id: 2,
-        title: "Ofertas exclusivas solo para ti",
-        description: "Aprovecha descuentos y promociones especiales en una selección de títulos. ¡Haz que tu biblioteca digital crezca sin gastar de más!",
+        title: "Empezar Pequeño, Pensar en Grande",
+        description: "No necesitas ser un experto para empezar a invertir, solo un poco de educación financiera y el hábito de comenzar con pequeñas cantidades.",
         link: "#",
     },
     {
         id: 3,
-        title: "Nuevas publicaciones cada semana",
-        description: "Mantente al día con las últimas novedades literarias. Explora nuestras selecciones semanales y encuentra tu próximo libro favorito.",
+        title: "Haz que tu Dinero Trabaje para Ti",
+        description: "Las inversiones son una forma de hacer que tu dinero trabaje para ti, liberándote de la necesidad de depender solo de tu salario en el futuro.",
         link: "#",
     },
     {
         id: 4,
-        title: "Comparte tu pasión por los libros",
-        description: "Únete a nuestra comunidad de lectores. Comparte reseñas, recomendaciones y conecta con otros amantes de la literatura.",
+        title: "La Educación Financiera es Clave",
+        description: "Las oportunidades de inversión están en todas partes; lo importante es aprender a identificar aquellas que se alinean con tus objetivos a largo plazo.",
         link: "#",
     },
 ]

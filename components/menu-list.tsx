@@ -27,7 +27,7 @@ const MenuList = () => {
                                 <NavigationMenuLink asChild>
                                     <a
                                         className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                                        href="/"
+                                        href="/page"
                                     >
 
                                         <div className="mb-2 mt-4 text-lg font-medium">
@@ -90,7 +90,7 @@ const components: { title: string; href: string; description: string }[] = [
     },
     {
         title: "Calculadora",
-        href: "page/calculadora",
+        href: "/page/calculadora",
         description:
             "Calcula el rendimiento de tu inversión: ingresa tu monto y descubre cómo crece tu dinero con el tiempo.",
     },
