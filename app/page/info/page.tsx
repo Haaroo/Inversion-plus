@@ -102,24 +102,48 @@ export default function page() {
                     activo con la expectativa de obtener un retorno o beneficio en el futuro.
                     Esto puede incluir la compra de acciones, bonos, bienes raíces, o incluso
                     iniciar un negocio.
-                    <p>
+                    <p><br />
               Existen varios tipos de inversiones, cada una con su propio nivel de riesgo y potencial de retorno:
-                    </p>
+                    </p><br />
                     <ul className="list-disc list-inside">
                       <li>
-                        <strong>Acciones:</strong> Participaciones en una empresa. El valor puede fluctuar, pero ofrecen el potencial de altos retornos.
-                      </li>
+                        <strong>Activos:</strong> Son bienes o recursos con valor económico. Pueden ser físicos, como inmuebles o equipos, o financieros, como acciones o bonos.
+                      </li><br />
                       <li>
-                        <strong>Bonos:</strong> Préstamos a gobiernos o empresas. Generalmente menos arriesgados que las acciones, pero con retornos más bajos.
-                      </li>
+                        <strong>Acciones:</strong> Representan una parte de propiedad en una empresa. Al comprar acciones, te conviertes en accionista y tienes derecho a una parte de las ganancias y, en algunos casos, a votar en asuntos de la compañía.
+                      </li><br />
                       <li>
-                        <strong>Bienes raíces:</strong> Inversiones en propiedades. Pueden generar ingresos de alquiler y apreciación del valor.
-                      </li>
+                        <strong>Bonos:</strong> Son instrumentos de deuda que emiten entidades como gobiernos o empresas. Al comprar un bono, le prestas dinero a la entidad emisora y a cambio recibes pagos de intereses hasta que te devuelvan el principal.
+                      </li><br />
                       <li>
-                        <strong>Fondos de inversión:</strong> Agrupan dinero de varios inversores para comprar una variedad de activos, ofreciendo diversificación.
-                      </li>
+                        <strong>Rendimiento:</strong> Es la ganancia que obtienes de una inversión, expresada generalmente como un porcentaje del monto invertido. Puede ser en forma de intereses, dividendos o apreciación del valor del activo.
+                      </li><br />
                       <li>
-                        <strong>Criptomonedas:</strong> Activos digitales. Muy volátiles, pero pueden ofrecer altos retornos si se manejan correctamente.
+                        <strong>Diversificación:</strong> Estrategia que implica distribuir las inversiones en diferentes tipos de activos para reducir el riesgo. La idea es no poner "todos los huevos en una sola canasta".
+                      </li><br />
+                      <li>
+                        <strong>Liquidez:</strong> Capacidad para convertir una inversión en efectivo rápidamente y sin pérdida significativa de valor. Los activos líquidos, como el efectivo, son fáciles de convertir, mientras que los activos ilíquidos, como bienes raíces, requieren más tiempo.
+                      </li><br />
+                      <li>
+                        <strong>Riesgo y retorno:</strong> El riesgo es la posibilidad de perder una parte o la totalidad de la inversión, mientras que el retorno es la ganancia que se espera. Generalmente, a mayor riesgo, mayor es el retorno potencial, y viceversa.
+                      </li><br />
+                      <li>
+                        <strong>Interés compuesto:</strong> Proceso en el cual los intereses ganados se reinvierten para generar más intereses. A largo plazo, el interés compuesto puede hacer que las inversiones crezcan exponencialmente.
+                      </li><br />
+                      <li>
+                        <strong>Inflación:</strong> Incremento sostenido de los precios de bienes y servicios con el tiempo. La inflación puede reducir el poder adquisitivo de las inversiones si el rendimiento no supera la tasa de inflación.
+                      </li><br />
+                      <li>
+                        <strong>Portafolio:</strong> Conjunto de todas las inversiones de un individuo. Un portafolio diversificado puede incluir una mezcla de acciones, bonos, efectivo y otros activos.
+                      </li><br />
+                      <li>
+                        <strong>Análisis técnico y fundamental:</strong> Métodos para evaluar inversiones. El análisis fundamental estudia los fundamentos de una empresa (como ingresos y ganancias), mientras que el análisis técnico observa patrones y tendencias en el precio de las acciones para hacer pronósticos.
+                      </li><br />
+                      <li>
+                        <strong>Mercado de valores:</strong> Plataforma donde se compran y venden acciones y otros valores financieros. Los mercados pueden ser físicos, como la Bolsa de Nueva York, o digitales, como muchos intercambios modernos.
+                      </li><br />
+                      <li>
+                        <strong>Fondos de inversión:</strong> Vehículos que agrupan el dinero de múltiples inversores para invertir en una cartera diversificada de activos. Hay varios tipos, como fondos de renta fija, renta variable, o mixtos.
                       </li>
                     </ul>
                     <Image 
