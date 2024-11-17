@@ -95,7 +95,7 @@ const ContactForm = () => {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit">Enviar</Button>
+                    <Button type="submit" className="bg-[#232e2e] text-white">Enviar</Button>
                 </form>
             )}
         </Form>
