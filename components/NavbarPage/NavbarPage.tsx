@@ -15,7 +15,7 @@ const NavbarPage = () => {
     return (
         <div className="flex items-center justify-between p-4 mx-auto cursor-pointer sm:max-w-4xl md:max-w-6xl">
                 <Image 
-                                src='/logo.png' 
+                                src='/logop.png' 
                                 alt='Logo' 
                                 width={250} 
                                 height={150} 

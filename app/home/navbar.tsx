@@ -10,9 +10,9 @@ const NavbarHome = () => {
 
     return (
         <div className="w-full h-full relative">
-            <header className="top-0 left-0 w-full z-50 flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md">         
+            <header className="top-0 left-0 w-full z-50 flex justify-between items-center text-black py-6 px-8 md:px-32 drop-shadow-md">         
                 <Image 
-                    src='/logo.png' 
+                    src='/logop.png' 
                     alt='Logo' 
                     width={250} 
                     height={150} 
