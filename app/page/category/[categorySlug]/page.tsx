@@ -37,10 +37,11 @@ export default function Page() {
             </h1>
         )}
         <Separator />
-
+        <p className="p-6 pb-5 py-7 text-2xl font-semibold">
+            Temas de interes...
+        </p>
+        <Separator />
         <div className="sm:flex sm:justify-between">
-            <FiltersControlsCategory setFilterOrigin={setFilterOrigin} />
-
             <div className="grid gap-5 mt-8 sm:grid-cols-2 md:grid-cols-3 md:gap-10">
             {loading && <SkeletonSchema grid={3} />}
             {filteredProducts !== null &&
@@ -51,7 +52,7 @@ export default function Page() {
             {filteredProducts !== null &&
                 !loading &&
                 filteredProducts.length === 0 && (
-                <p>No hay productos con este filtro.</p>
+                <p>No hay preguntas de momento en esta seccion...</p>
                 )}
             </div>
         </div>

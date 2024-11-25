@@ -38,7 +38,7 @@ const ChooseCategory = () => {
                                     alt={categoryName}
                                     className="max-w-full transition duration-300 ease-in-out rounded-lg hover:scale-110"
                                 />
-                                <p className="absolute w-full py-2 text-lg font-bold text-center text-black bottom-5 backdrop-blur-lg">
+                                <p className="text-xl absolute w-full py-2 font-bold text-center text-black bottom-5 backdrop-blur-lg">
                                     {categoryName}
                                 </p>
                             </div>

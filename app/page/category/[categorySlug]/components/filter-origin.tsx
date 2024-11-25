@@ -1,5 +1,4 @@
 import { useGetProductField } from "@/api/getProductField";
-import NavbarPage from "@/components/NavbarPage/NavbarPage";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { FilterTypes } from "@/types/filters";
