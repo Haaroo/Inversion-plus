@@ -48,8 +48,7 @@ const Footer = () => {
 
                 <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
                     &copy; 2024
-                    <Link href="#">CloudBooks.</Link>
-                    Todos los derechos reservados
+                    <Link href="#"> Inversion+</Link>
                 </span>
             </div>
         </footer>

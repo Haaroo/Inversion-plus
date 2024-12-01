@@ -20,6 +20,7 @@ const NavbarPage = () => {
                                 width={250} 
                                 height={150} 
                                 className="transition-all"
+                                onClick={() => router.push("/page")}
                             />
             <div className="items-center justify-between hidden sm:flex">
                 <MenuList />

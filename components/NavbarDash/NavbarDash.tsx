@@ -29,7 +29,7 @@ const NavbarDash =() =>{
                 </div>
                 <div className="flex gap-x-2 items-center">
                     <Image 
-                            src='/logo.png' 
+                            src='/logop.png' 
                             alt='Logo' 
                             width={250} 
                             height={150} 

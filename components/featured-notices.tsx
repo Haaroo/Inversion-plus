@@ -32,18 +32,20 @@ const FeaturedNotice = () => {
                                                     <p className="mt-2 px-4 py-1 text-2xl text-black font-bold">
                                                         {Title}
                                                     </p> 
-                                                    <p className="mt-2 px-4 py-1 text-black">
-                                                        {Description}
-                                                    </p> 
-                                                    <div className="w-full items-center overflow-hidden">
-                                                        <img
-                                                        src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
-                                                        alt="Image featured"
-                                                        className="justify-center object-cover text-center items-center"
-                                                        width={400}
-                                                        height={400}
-                                                        />        
-                                                    </div>                                       
+                                                    <div className="flex flex-col sm:flex-row items-center sm:space-x-4">
+                                                        <p className="mt-2 text-black px-4 py-1">
+                                                            {Description}
+                                                        </p> 
+                                                        <div className="flex-shrink-0 w-52 h-52 overflow-hidden mt-4 sm:mt-0">
+                                                            <img
+                                                            src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
+                                                            alt="Image featured"
+                                                            className="object-cover w-full h-full rounded-full"
+                                                            width={500}
+                                                            height={500}
+                                                            />        
+                                                        </div>
+                                                    </div>                              
                                                 </CardContent>
                                         </Card>
                                     </div>

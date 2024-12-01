@@ -10,7 +10,7 @@ const AboutUs: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false); 
     
     return (
-        <div>
+        <div className="realtive inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]">
             <NavbarHome />
             <main className='min-h-max grid grid-cols-1 lg:grid-cols-1 p-10 lg:p-8'>
             <section className='lg:flex h-full flex-col items-center justify-center gap-y-5 bg-[#99b4b2] rounded-2xl'>
