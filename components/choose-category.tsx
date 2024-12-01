@@ -19,32 +19,31 @@ const ChooseCategory = () => {
         <h3 className="px-6 pb-4 text-3xl sm:pb-8">
             Elige tu categoría favorita
         </h3>
-        <div className="grid gap-5 sm:grid-cols-3 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
         {loading ? (
-                    <SkeletonSchema grid={3} />
-                ) : (
-            result && result.map((category2 : CategoryType) => {
-                const { id, categoryName,slug, images } = category2;
-                return (
-                    <Link
-                    key={id}
-                    href={`page/category/${slug}`}
-                    className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-lg"
-                    >
-                        <div className="p-1 h-full">
-                            <div className="shadow-none w-full items-center overflow-hidden">
-                                <img
-                                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
-                                    alt={categoryName}
-                                    className="max-w-full transition duration-300 ease-in-out rounded-lg hover:scale-110"
-                                />
-                                <p className="text-xl absolute w-full py-2 font-bold text-center text-black bottom-5 backdrop-blur-lg">
-                                    {categoryName}
-                                </p>
-                            </div>
-                        </div>
-                    </Link>
-                );
+            <SkeletonSchema grid={3} />
+        ) : (
+            result &&
+            result.map((category2: CategoryType) => {
+            const { id, categoryName, slug, images } = category2;
+            return (
+                <Link
+                key={id}
+                href={`page/category/${slug}`}
+                className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-xl shadow-lg transition-transform duration-300 hover:scale-105 group"
+                >
+                <div className="w-full h-full relative">
+                    <img
+                    src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images[0].url}`}
+                    alt={categoryName}
+                    className="w-full h-full object-cover rounded-xl transition-all duration-300 ease-in-out transform group-hover:brightness-75"
+                    />
+                    <p className="absolute bottom-0 left-0 right-0 text-2xl font-bold text-white text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                    {categoryName}
+                    </p>
+                </div>
+                </Link>
+            );
             })
         )}
         </div>
