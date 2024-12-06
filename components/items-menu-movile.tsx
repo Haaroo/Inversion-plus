@@ -11,7 +11,7 @@ const ItemsMenuMobile = () => {
             <PopoverContent>
                 <Link href="/page/info" className="block">Primeros pasos</Link>
                 <Link href="/page/calculadora" className="block">Calculadora</Link>
-                <Link href="/categories/cafe-capsula" className="block">Revistas</Link>
+                <Link href="/page/crypto" className="block">Criptomonedas</Link>
                 <Link href="/categories/cafe-capsula" className="block">Articulos</Link>
             </PopoverContent>
         </Popover>

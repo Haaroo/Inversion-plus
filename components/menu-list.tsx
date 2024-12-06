@@ -95,10 +95,10 @@ const components: { title: string; href: string; description: string }[] = [
             "Calcula el rendimiento de tu inversión: ingresa tu monto y descubre cómo crece tu dinero con el tiempo.",
     },
     {
-        title: "Revistas",
-        href: "/category/capsula",
+        title: "Criptomonedas",
+        href: "/page/crypto",
         description:
-            "Mantente informado y entretenido con nuestra colección de revistas digitales. Disfruta de artículos interesantes y de actualidad sobre temas que te apasionan, todo al alcance de un clic.",
+            "Explora el mundo de las criptomonedas: conoce las principales monedas digitales, su cotización en tiempo real, análisis de tendencias y recursos para invertir de manera informada.",
     },
     {
         title: "Articulos",
