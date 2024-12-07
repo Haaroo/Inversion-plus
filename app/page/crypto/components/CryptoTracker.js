@@ -1,16 +1,13 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import { fetchCryptoData } from "../api";
 import CryptoChart from "./CryptoChart";
 
-
 const CryptoTracker = () => {
   const [cryptos, setCryptos] = useState([]);
   const [selectedCryptos, setSelectedCryptos] = useState([]);
 
-
-  // Uso de la API
   useEffect(() => {
     const getCryptoData = async () => {
       const data = await fetchCryptoData();
@@ -31,72 +28,74 @@ const CryptoTracker = () => {
     });
   };
 
-  // Conversor de DLS a MXN
   const convertToMXN = (crypto) => {
     return {
       ...crypto,
-      current_price: crypto.current_price * 20.33, //aprox 20 al cambio
-      price_history: crypto.price_history?.map((price) => price * 20.33) || [], // Conversión de los precios históricos
+      current_price: crypto.current_price * 20.33,
+      price_history: crypto.price_history?.map((price) => price * 20.33) || [],
     };
   };
 
   return (
-    <div  className="CryptoTable">
-      <h1 className="font-bold text-2xl">Crypto Tracker (MXN)</h1>
-      {/* Tabla de precios de criptomonedas */}
-      <table class="Table">
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Precio (MXN)</th>
-            <th>Cambio (24h)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {cryptos.map((crypto) => (
-            <tr key={crypto.id}>
-              <td>{crypto.name}</td>
-              <td>
-                ${crypto.current_price.toFixed(2)} MXN
-              </td>
-              <td
-                style={{color: crypto.price_change_percentage_24h >= 0 ? "green" : "red",}}
-              >
-                {crypto.price_change_percentage_24h.toFixed(2)}%
-              </td>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Crypto Tracker (MXN)</h1>
+      
+      {/* Tabla con scroll horizontal en pantallas pequeñas */}
+      <div className="overflow-x-auto bg-white shadow-lg rounded-lg">
+        <table className="min-w-full table-auto text-sm">
+          <thead>
+            <tr className="border-b bg-gray-100">
+              <th className="px-4 py-2 text-left font-semibold text-gray-700">Nombre</th>
+              <th className="px-4 py-2 text-left font-semibold text-gray-700">Precio (MXN)</th>
+              <th className="px-4 py-2 text-left font-semibold text-gray-700">Cambio (24h)</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
-
-      {/* Gráfica de precios de criptomonedas seleccionadas */}
-      <div className="CryptoGraphics">
-        <h1 className="font-bold text-2xl">Gráfica de Precios historica</h1>
-         {/* Botones para seleccionar criptomonedas para la gráfica */}
-      <div>
-        {cryptos.map((crypto) => (
-          <button class ="btnGraph"
-            key={crypto.id}
-            onClick={() => toggleCryptoSelection(crypto)}
-            style={{
-              backgroundColor: selectedCryptos.includes(crypto) ? "#98b4b2" : "#f1f1f1",
-              color: selectedCryptos.includes(crypto) ? "white" : "black",
-            }}
-          >
-            {crypto.name}
-          </button>
-        ))}
+          </thead>
+          <tbody>
+            {cryptos.map((crypto) => (
+              <tr key={crypto.id} className="border-b hover:bg-gray-50">
+                <td className="px-4 py-2">{crypto.name}</td>
+                <td className="px-4 py-2">${crypto.current_price.toFixed(2)} MXN</td>
+                <td
+                  className={`px-4 py-2 ${
+                    crypto.price_change_percentage_24h >= 0 ? "text-green-500" : "text-red-500"
+                  }`}
+                >
+                  {crypto.price_change_percentage_24h.toFixed(2)}%
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
+
+      {/* Sección de gráficos */}
+      <div className="mt-8">
+        <h2 className="text-2xl font-semibold text-center text-gray-800 mb-4">Gráfica de Precios Histórica</h2>
+        
+        {/* Botones de selección de criptomonedas */}
+        <div className="flex flex-wrap justify-center gap-4 mb-6">
+          {cryptos.map((crypto) => (
+            <button
+              key={crypto.id}
+              onClick={() => toggleCryptoSelection(crypto)}
+              className={`px-4 py-2 rounded-full border-2 font-semibold ${
+                selectedCryptos.includes(crypto)
+                  ? "bg-gray-600 text-white border-gray-600"
+                  : "bg-gray-200 text-gray-700 border-gray-300"
+              } hover:bg-gray-300 transition-all`}
+            >
+              {crypto.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Mostrar gráfico si hay criptomonedas seleccionadas */}
         {selectedCryptos.length > 0 ? (
-          <CryptoChart
-            cryptos={selectedCryptos.map(convertToMXN)} // Solo convertimos los datos para la gráfica
-          />
+          <CryptoChart cryptos={selectedCryptos.map(convertToMXN)} />
         ) : (
-          <p>Por favor, selecciona al menos una criptomoneda para ver la gráfica.</p>
+          <p className="text-center text-gray-600">Por favor, selecciona al menos una criptomoneda para ver la gráfica.</p>
         )}
       </div>
-
-
     </div>
   );
 };
