@@ -101,10 +101,10 @@ const components: { title: string; href: string; description: string }[] = [
             "Explora el mundo de las criptomonedas: conoce las principales monedas digitales, su cotización en tiempo real, análisis de tendencias y recursos para invertir de manera informada.",
     },
     {
-        title: "Articulos",
-        href: "/category/capsula",
+        title: "Finance Tracker",
+        href: "/page/ftracker",
         description:
-            "Los artículos son escritos que analizan, informan o opinan sobre un tema específico. Pueden ser de diferentes tipos, como artículos de noticias, de opinión, científicos, académicos o de divulgación.",
+            "Accede a tu seguimiento financiero para gestionar y monitorear tus ingresos, gastos y ahorros.",
     },
 ]
 
