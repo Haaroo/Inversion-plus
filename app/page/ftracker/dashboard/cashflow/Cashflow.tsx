@@ -51,42 +51,39 @@ const Cashflow: React.FC = () => {
   }, []);
 
   return (
-    <main className="flex-1 overflow-x-hidden overflow-y-auto">
-      <section className="flex">
+    <main className="flex-1 overflow-x-hidden overflow-y-auto p-4 lg:p-8">
+      <section className="flex gap-8 flex-col lg:flex-row">
         <Income refreshCashflow={fetchCashflow} />
-        
-        <section className="w-1/3 bg-gray-100 border-x-2 border-gray-300 h-screen">
-          <section className="border-b-2 border-gray-300 lg:px-6 py-3 flex justify-between">
-            <h1 className="mt-6 text-xl">Cashflow</h1>
+        <section className="w-full lg:w-1/3 bg-white rounded-lg shadow-lg p-6">
+          <section className="border-b-2 border-gray-300 py-4 flex justify-between items-center">
+            <h1 className="text-2xl font-semibold text-gray-800">Flujo de fondos</h1>
           </section>
-          <article className="w-full px-5">
+          <article className="w-full mt-6">
             {cashflow.map((item) => (
-              <article key={item.id} className={`h-full border-2 bg-gray-100 rounded-lg overflow-hidden mt-4 ${item.type === 'income' ? 'border-green-400' : 'border-red-400'}`}>
-                <article className="py-3 px-4">
-                  <section className="flex flex-row justify-between">
-                    <section>
-                      <section className="flex mb-3">
-                        <p className="leading-relaxed font-medium text-lg">{item.description}</p>
-                      </section>
-                      {/* <span className="text-base text-gray-500">{new Date(item.createdAt).toLocaleString()}</span> */}
-                      <span className="text-base text-gray-500">{format(parseISO(item.createdAt), 'yyyy-MM-dd HH:mm:ss')}</span>
-                    </section>
-                    <section className="flex">
-                      <h1 className="lg:mt-5 text-xl font-medium">
-                        ${item.amount.toFixed(2)}
-                      </h1>
-                    </section>
+              <article
+                key={item.id}
+                className={`h-full border-2 rounded-lg bg-white mt-4 shadow-lg ${item.type === 'income' ? 'border-green-500' : 'border-red-500'}`}
+              >
+                <article className="py-4 px-5">
+                  <section className="flex justify-between mb-3">
+                    <p className="text-lg font-medium text-gray-800">{item.description}</p>
+                    <h1 className={`text-lg font-semibold ${item.type === 'income' ? 'text-green-600' : 'text-red-600'}`}>
+                      ${item.amount.toFixed(2)}
+                    </h1>
+                  </section>
+
+                  <section className="flex justify-between text-sm text-gray-500">
+                    <span>{format(parseISO(item.createdAt), 'yyyy-MM-dd HH:mm:ss')}</span>
                   </section>
                 </article>
               </article>
             ))}
           </article>
         </section>
-        
         <Expense refreshCashflow={fetchCashflow} />
       </section>
     </main>
   );
-};
+};  
 
 export default Cashflow;

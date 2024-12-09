@@ -12,7 +12,7 @@ const ItemsMenuMobile = () => {
                 <Link href="/page/info" className="block">Primeros pasos</Link>
                 <Link href="/page/calculadora" className="block">Calculadora</Link>
                 <Link href="/page/crypto" className="block">Criptomonedas</Link>
-                <Link href="/categories/cafe-capsula" className="block">Articulos</Link>
+                <Link href="/page/ftracker" className="block">Budget</Link>
             </PopoverContent>
         </Popover>
     );

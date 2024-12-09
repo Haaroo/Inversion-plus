@@ -76,71 +76,83 @@ const Budget: React.FC = () => {
     const totalBudgetedAmount = budgets.reduce((total, budget) => total + budget.amount, 0);
 
     return (
-        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200 pl-6">
+        <main className="flex-1 overflow-x-hidden overflow-y-auto pl-6">
             <div className="container mx-auto py-6">
-                <section className="w-full flex flex-row justify-between py-4 px-[15px]">
-                    <h2 className="text-2xl text-gray-700 font-medium">BUDGET</h2>
-                    <button onClick={handleOpenBudgetForm} className="bg-teal-500 mx-2 py-2 px-3 w-30 text-white rounded-lg">
-                        Add a budget
-                    </button>
+                {/* Header Section */}
+                <section className="w-full flex flex-row justify-between py-4 px-6">
+                <h2 className="text-3xl text-gray-800 font-semibold">Presupuesto</h2>
+                <button
+                    onClick={handleOpenBudgetForm}
+                    className="bg-[#98b4b2] hover:bg-teal-600 mx-2 py-2 px-6 text-white font-semibold rounded-lg transition-all ease-in-out duration-300"
+                >
+                    Agregar presupuesto
+                </button>
                 </section>
 
+                {/* No Budgets Available */}
                 <section>
-                    {budgets.length === 0 ? (
-                        <div className="container mx-auto py-6 flex justify-center">
-                            <p className="text-2xl text-gray-700">You haven't added a budget..</p>
-                        </div>
-                    ) : (
-                        <>
-                            <article className="lg:mt-5 pl-6 pt-4 lg:w-full w-full lg:grid lg:gap-4 lg:grid-cols-3 lg:grid-rows-3 grid -m-4 md:grid md:gap-3 md:grid-cols-2 md:grid-rows-2">
-                                {budgets.map((budget) => (
-                                    <article key={budget.id} className="h-full border-2 bg-gray-100 rounded-xl overflow-hidden">
-                                        <article className="py-3 px-5 border-l-8 border-teal-500">
-                                            {/* Your budget card content */}
-                                            <section className="mt-4 flex flex-row justify-between">
-                                                <section>
-                                                    <section className="flex">
-                                                        <p className="leading-relaxed font-medium text-lg capitalize">{budget.category}</p>
-                                                    </section>
-                                                    <span className="text-base text-gray-500">Budget planned:</span>
-                                                </section>
-                                                <section>
-                                                    <h1 className="lg:mt-5 text-xl font-medium">${budget.amount}</h1>
-                                                </section>
-                                            </section>
+                {budgets.length === 0 ? (
+                    <div className="container mx-auto py-6 flex justify-center">
+                    <p className="text-xl text-gray-600">Todavía no has agregado ningún presupuesto...</p>
+                    </div>
+                ) : (
+                    // Budgets List
+                    <article className="lg:mt-5 pl-6 pt-4 lg:w-full w-full lg:grid lg:gap-8 lg:grid-cols-3 lg:grid-rows-3 grid md:grid-cols-2 gap-6">
+                    {budgets.map((budget) => (
+                        <article
+                        key={budget.id}
+                        className="h-full border-2 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all ease-in-out duration-300"
+                        >
+                        <article className="py-5 px-6 border-l-8 border-[#98b4b2]">
+                            {/* Budget Category and Amount */}
+                            <section className="mt-4 flex flex-row justify-between items-center">
+                            <section>
+                                <p className="text-lg font-medium text-gray-800 capitalize">{budget.category}</p>
+                                <span className="text-sm text-gray-500">Presupuesto planificado:</span>
+                            </section>
+                            <section>
+                                <h1 className="text-xl font-semibold text-teal-500">${budget.amount.toFixed(2)}</h1>
+                            </section>
+                            </section>
 
-                                            <hr className="mt-5 border-2" />
+                            <hr className="mt-5 border-gray-300" />
 
-                                            <section className="flex items-center flex-wrap mt-5">
-                                                <span className="mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 bg-gray-300 rounded-full p-4 cursor-pointer" title="Edit">
-                                                    <FaEdit className="w-4 h-4" onClick={() => handleEditBudget(budget)} />
-                                                </span>
-                                                <span
-                                                    className="inline-flex items-center leading-none text-sm bg-gray-300 rounded-full p-2 cursor-pointer hover:bg-gray-400"
-                                                    title="Delete"
-                                                    aria-label="Delete budget"
-                                                >
-                                                    <FaTrash className="w-4 h-4" onClick={() => handleDeleteBudget(budget.id)} />
-                                                </span>
-                                            </section>
-                                        </article>
-                                    </article>
-                                ))}
-                            </article>
-                        </>
-                    )}
+                            {/* Edit/Delete Actions */}
+                            <section className="flex items-center flex-wrap mt-5 justify-between">
+                            <span
+                                className="inline-flex items-center leading-none text-sm bg-teal-100 rounded-full p-2 cursor-pointer hover:bg-teal-200 transition-all ease-in-out duration-300"
+                                title="Edit"
+                                onClick={() => handleEditBudget(budget)}
+                            >
+                                <FaEdit className="w-5 h-5 text-teal-500" />
+                            </span>
+                            <span
+                                className="inline-flex items-center leading-none text-sm bg-red-100 rounded-full p-2 cursor-pointer hover:bg-red-200 transition-all ease-in-out duration-300"
+                                title="Delete"
+                                aria-label="Delete budget"
+                                onClick={() => handleDeleteBudget(budget.id)}
+                            >
+                                <FaTrash className="w-5 h-5 text-red-500" />
+                            </span>
+                            </section>
+                        </article>
+                        </article>
+                    ))}
+                    </article>
+                )}
                 </section>
 
+                {/* Budget Form */}
                 {isBudgetFormOpen && (
-                    <BudgetForm
-                        onClose={handleCloseBudgetForm}
-                        setBudgets={setBudgets}
-                        selectedBudget={selectedBudget}
-                        totalBudgetedAmount={totalBudgetedAmount}
-                    />
+                <BudgetForm
+                    onClose={handleCloseBudgetForm}
+                    setBudgets={setBudgets}
+                    selectedBudget={selectedBudget}
+                    totalBudgetedAmount={totalBudgetedAmount}
+                />
                 )}
             </div>
-        </main>
+            </main>
     )
 }
 
