@@ -49,7 +49,7 @@ const NavbarHome = () => {
                         </svg>
                     </button>
 
-                    <ul className="flex flex-col xl:flex-row xl:space-x-12 xl:items-center xl:gap-12 p-6 xl:p-0 text-x">
+                    <ul className="flex flex-col xl:flex-row xl:space-x-12 xl:items-center xl:gap-12 p-6 xl:p-0 text-xl">
                         <li className="relative group text-gray-800 hover:text-secondary cursor-pointer p-4 xl:p-0" onClick={() => {setIsOpen(false); router.push('/');}}>
                             <a>Inicio</a>
                             <span className="absolute left-0 bottom-0 w-full h-1 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
