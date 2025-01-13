@@ -1,5 +1,5 @@
 "use client"
-import { BaggageClaim, Heart, ShoppingCart, User,LogOut } from "lucide-react";
+import { Newspaper,LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import MenuList from "@/components/menu-list";
 import ItemsMenuMobile from "@/components/items-menu-movile";
@@ -29,11 +29,7 @@ const NavbarPage = () => {
                 <ItemsMenuMobile />
             </div>
             <div className="flex items-center justify-between gap-2 sm:gap-7">
-                <Heart
-                    strokeWidth="1"
-                    className={`cursor-pointer 
-                    ${lovedItems.length > 0 && 'fill-black dark:fill-white'}`}
-                    onClick={() => router.push("/loved-products")} />
+                <Newspaper strokeWidth={1} className="cursor-pointer" onClick={() => router.push("/page/news")}/>
                 <LogOut strokeWidth={1} className="cursor-pointer" onClick={() => router.push("/")}/>
             </div>
         </div>
