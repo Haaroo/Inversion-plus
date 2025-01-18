@@ -32,7 +32,7 @@ const Overview: React.FC = () => {
         <main className="flex-1 overflow-x-hidden overflow-y-auto px-4 sm:px-6 lg:px-8">
             <div className="container mx-auto py-6">
                 <section className="w-full flex flex-col md:flex-row justify-between py-4 px-[15px]">
-                    <h2 className="text-2xl text-gray-700 font-medium">OVERVIEW</h2>
+                    <h2 className="text-2xl text-gray-700 font-medium">Descripcion general</h2>
                     <div className="flex mt-2 md:mt-0">
                         <button onClick={() => setChartType('bar')} className={`mx-2 py-2 px-3 ${chartType === 'bar' ? 'bg-[#98b4b2] text-white' : 'bg-gray-200 text-gray-700'} rounded-lg`}>
                             Bar Chart

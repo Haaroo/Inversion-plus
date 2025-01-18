@@ -34,7 +34,7 @@ const SideNav = () => {
         <section className="flex flex-col mt-8 ml-8 text-gray-600">
           {/* Logo o nombre del proyecto */}
           <figure className="flex pb-5">
-            <p className="font-medium text-xl ml-2">Tracker</p>
+            <p className="font-medium text-xl ml-2">Rastrear</p>
           </figure>
 
           {/* Enlaces de navegación */}
@@ -42,7 +42,7 @@ const SideNav = () => {
             <Link href="/page/ftracker">
               <section className={`flex flex-row cursor-pointer ${pathname === "/page/ftracker" ? "text-teal-600" : "text-gray-600"}`}>
                 <MdDashboard className="w-6 h-6" />
-                <span className="text-lg ml-2">Overview</span>
+                <span className="text-lg ml-2">Descripcion general</span>
               </section>
             </Link>
           </section>
@@ -51,7 +51,7 @@ const SideNav = () => {
             <Link href="/page/ftracker/dashboard/budget">
               <section className={`flex flex-row cursor-pointer ${pathname === "page/ftracker/dashboard/budget" ? "text-teal-600" : "text-gray-600"}`}>
                 <FaFileInvoice className="w-6 h-6" />
-                <span className="text-lg ml-3">Budget</span>
+                <span className="text-lg ml-3">Presupuesto</span>
               </section>
             </Link>
           </section>
@@ -60,7 +60,7 @@ const SideNav = () => {
             <Link href="/page/ftracker/dashboard/cashflow">
               <section className={`flex flex-row cursor-pointer ${pathname === "page/ftracker/dashboard/cashflow" ? "text-teal-600" : "text-gray-600"}`}>
                 <FaWallet className="w-6 h-6" />
-                <span className="text-lg ml-3">Cashflow</span>
+                <span className="text-lg ml-3">Flujo de caja</span>
               </section>
             </Link>
           </section>
